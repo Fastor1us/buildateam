@@ -1,6 +1,3 @@
-.container {
-  position: relative;
-  max-width: 488px;
-  width: 100%;
-  text-align: center;
+.productContainer {
+  max-width: 1400px;
 }

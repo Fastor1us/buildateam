@@ -1,0 +1,34 @@
+.li {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title:hover {
+  white-space: normal;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+}
+
+
+.description {
+  overflow: auto;
+  flex: 1;
+}

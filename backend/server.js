@@ -1,8 +1,10 @@
 const express = require('express');
+const productsRoutes = require('./routes/productsRoutes');
+
 const CLIENT_URL = 'http://localhost:3000';
+const PORT = process.env.PORT || 3001;
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 
 app.use((req, res, next) => {
@@ -15,10 +17,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use((req, res, next) => {
-  req.token = req.headers.authorization;
-  next();
-});
+app.use('/products', productsRoutes);
 
 app.listen(PORT, () => {
   console.log(`Сервер запущен на порту ${PORT}\n`);
